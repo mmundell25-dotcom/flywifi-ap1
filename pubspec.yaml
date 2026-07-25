@@ -1,0 +1,42 @@
+name: flywifi_app
+description: App de clientes de Fly WiFi - registro, pagos y monitoreo de servicio.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Networking
+  dio: ^5.4.3
+  connectivity_plus: ^6.0.3
+
+  # Estado
+  provider: ^6.1.2
+
+  # Almacenamiento seguro del token JWT
+  flutter_secure_storage: ^9.2.2
+
+  # Pagos (checkout de Mercado Pago vía WebView)
+  webview_flutter: ^4.8.0
+
+  # Gráficos para el historial de señal
+  fl_chart: ^0.68.0
+
+  # Fuentes (Poppins, como en PELA STORE / Fly WiFi)
+  google_fonts: ^6.2.1
+
+  # Speed test
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
