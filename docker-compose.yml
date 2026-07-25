@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: flywifi-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: flywifi
+      POSTGRES_PASSWORD: flywifi_dev
+      POSTGRES_DB: flywifi_app
+    ports:
+      - '5432:5432'
+    volumes:
+      - flywifi_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  flywifi_postgres_data:
